@@ -7,7 +7,7 @@ import SignUpScreen from "../screens/SignUpScreen";
 
 const Stack = createStackNavigator();
 
-const NavigationScreen = () => {
+const NavigationScreen = (p:any) => {
   return (
     <Stack.Navigator screenOptions={
         {
@@ -16,6 +16,8 @@ const NavigationScreen = () => {
       }>
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="SignUp" component={SignUpScreen} />
+        
+        
       </Stack.Navigator>
   );
 };
