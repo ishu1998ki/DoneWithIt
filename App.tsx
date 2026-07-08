@@ -7,22 +7,24 @@ import LoginScreen from "./src/screens/LoginScreen";
 import SignUpScreen from "./src/screens/SignUpScreen";
 import NavigationScreen from "./src/navigations/NavigationScreen";
 import { useNavigation, NavigationContainer } from '@react-navigation/native';
+import Route from './src/navigations/Route';
 
 
 function App(p:any) {
   p.navigation
 
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
-    <View style={styles.container}>
-      <NavigationContainer>
-        <NavigationScreen />
-      </NavigationContainer>
+    // <GestureHandlerRootView style={{ flex: 1 }}>
+    // <View style={styles.container}>
+    //   <NavigationContainer>
+    //     <NavigationScreen />
+    //   </NavigationContainer>
       
-      {/* <LoginScreen/> */}
-      {/* <SignUpScreen/> */}
-    </View>
-    </GestureHandlerRootView>
+    //   {/* <LoginScreen/> */}
+    //   {/* <SignUpScreen/> */}
+    // </View>
+    // </GestureHandlerRootView>
+    <Route/>
   );
 }
 const styles = StyleSheet.create({

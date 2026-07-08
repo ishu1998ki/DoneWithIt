@@ -47,9 +47,9 @@ function LoginField() {
 }
 
 function ForgotPassword() {
-  }
+
   return(
-    <View style={{ marginTop: 15, marginBottom:70, flexDirection: 'row' }}>     
+    <View style={{ marginTop: 15, marginBottom:45, flexDirection: 'row' }}>     
       <View style={{ paddingRight:33 }}>
       <Text style ={{ fontSize:14, color:'#fbfbfb', marginLeft:60}}>Remember me</Text>
       </View>
@@ -64,8 +64,13 @@ function ForgotPassword() {
 }
 
 function LogInButton() {
+  const navigation = useNavigation();
+
+  const RedirectHome = () => {
+    navigation.navigate("Home");
+  };
   return(
-    <TouchableOpacity>
+    <TouchableOpacity activeOpacity={0.7} onPress={RedirectHome}>
     <View style={{ backgroundColor: '#a31edc',
           borderRadius: 15,
           height: 50,
@@ -99,7 +104,7 @@ function SignupButton() {
 
       <TouchableOpacity onPress={handleRegister}>
       <View>
-      <Text style ={{ fontSize:14, color:'#fbfbfb'}}>Sign Up</Text>
+      <Text style ={{ fontSize:14, fontWeight:800, color:'#529df3'}}>Sign Up</Text>
       </View>
       </TouchableOpacity>
     </View>

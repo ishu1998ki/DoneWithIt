@@ -1,6 +1,9 @@
 import { StyleSheet, Text, View, Image, TextInput } from 'react-native'
 import React from 'react'
 import IonIcon from '@react-native-vector-icons/ionicons';
+import { TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+
 
 
 function SignUpField() {
@@ -94,6 +97,28 @@ function SignUpButton() {
   );
 }
 
+function LoginButton() {
+  const navigation = useNavigation();
+
+  const handleLogin = () => {
+    navigation.navigate("Login");
+  };
+  return(
+
+    <View style={{ marginTop: 20, flexDirection: 'row' }}>     
+      <View style={{paddingRight:10}}>
+      <Text style ={{ fontSize:14, color:'#fbfbfb', marginLeft:60}}>Already have an account ?</Text>
+      </View>
+
+      <TouchableOpacity onPress={handleLogin}>
+      <View>
+      <Text style ={{ fontSize:14, fontWeight:800, color:'#529df3'}}>Login</Text>
+      </View>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
 const SignUpScreen = () => {
   return (
     <View style={styles.container}>
@@ -119,6 +144,7 @@ const SignUpScreen = () => {
           <SignUpField />
           <ForgotPassword/>
           <SignUpButton/>
+          <LoginButton/>
         </View>
   )
 }
