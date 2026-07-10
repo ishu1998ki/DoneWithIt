@@ -67,7 +67,7 @@ function LogInButton() {
   const navigation = useNavigation();
 
   const RedirectHome = () => {
-    navigation.navigate("Home");
+    navigation.navigate("MyBottomTab");
   };
   return(
     <TouchableOpacity activeOpacity={0.7} onPress={RedirectHome}>
